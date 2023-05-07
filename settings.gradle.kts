@@ -1,0 +1,1 @@
+rootProject.name = "Background-Image-Plus-Bing"
