@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.heller.idea.bg"
-version = "1.0.0-SNAPSHOT"
+version = "1.2.3"
 
 repositories {
   mavenCentral()

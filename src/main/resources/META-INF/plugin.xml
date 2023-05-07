@@ -1,11 +1,18 @@
 <idea-plugin>
     <id>com.heller.BackgroundImagePlusBing</id>
     <name>Background Image Plus Bing</name>
-    <version>1.2.1_bing</version>
+    <version>1.2.1</version>
     <vendor email="527019124@qq.com" url="https://github.com/Castlebin">Castlebin</vendor>
 
     <description><![CDATA[
       Set the editor background to a random picture from a folder.<br>
+
+      Forked from https://github.com/lachlankrautz/backgroundImagePlus  <br>
+
+      But optimized for change function.<br>
+      reference fork:<br>
+            https://github.com/godfather1103/backgroundImagePlus<br>
+            https://github.com/zhanglanzhu521/backgroundImagePlus<br>
     ]]></description>
 
     <change-notes><![CDATA[
@@ -25,16 +32,14 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <applicationConfigurable groupId="appearance" groupWeight="20" id="background.image.plus"
-                                 displayName="Background Image Plus"
+                                 displayName="Background Image Plus + bing"
                                  instance="co.notime.intellijPlugin.backgroundImagePlus.ui.Settings"/>
     </extensions>
 
     <actions>
-        <group id="backgroundImagePlus" text="Background Image Plus" description="Background Image Plus">
-            <add-to-group group-id="ViewMenu" anchor="before" relative-to-action="ToggleFullScreenGroup"/>
+        <group id="backgroundImagePlus" text="Background Image Plus Bing" description="Background Image Plus + Bing" popup="true">
+            <add-to-group group-id="ViewMenu" anchor="last"/>
             <separator/>
-            <action id="setBackgroundImage" class="org.intellij.images.editor.actions.SetBackgroundImageAction"
-                    text="Set Background Image"/>
             <action id="randomBackgroundImage" class="co.notime.intellijPlugin.backgroundImagePlus.action.RandomBackground"
                     text="Random Background Image"/>
             <action id="clearBackgroundImage" class="co.notime.intellijPlugin.backgroundImagePlus.action.ClearBackground"

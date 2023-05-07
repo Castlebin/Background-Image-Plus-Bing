@@ -8,9 +8,9 @@ import com.intellij.notification.Notifications;
  * Author: Allan de Queiroz
  * Date:   07/05/17
  */
-class NotificationCenter {
+public class NotificationCenter {
 
-    static void notice(String message) {
+    public static void notice(String message) {
         Notification n = new Notification(
                 "extras",
                 "Notice",
