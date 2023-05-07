@@ -1,6 +1,7 @@
 package co.notime.intellijPlugin.backgroundImagePlus;
 
 import co.notime.intellijPlugin.backgroundImagePlus.ui.Settings;
+import com.heller.bg.BingImageDownloadHelper;
 import com.intellij.ide.util.PropertiesComponent;
 import com.intellij.openapi.wm.impl.IdeBackgroundUtil;
 import java.io.File;
@@ -25,6 +26,9 @@ public class RandomBackgroundTask implements Runnable {
             NotificationCenter.notice("Image folder not set");
             return;
         }
+
+        BingImageDownloadHelper.download(folder);
+
         File file = new File(folder);
         if (!file.exists()) {
             NotificationCenter.notice("Image folder not set");
