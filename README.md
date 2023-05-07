@@ -1,5 +1,15 @@
 # Background-Image-Plus-Bing
+在 Background-Image-Plus 插件的基础上，加上每天自动从 bing 下载图片
 
+源码 :  
+https://github.com/lachlankrautz/backgroundImagePlus    
+
+参考源码 :  
+https://github.com/HNUHell/backgroundImagePlus    
+
+https://github.com/godfather1103/backgroundImagePlus     
+
+# 插件修改方法
 1. 使用 idea 社区版新建一个 idea plugin 工程
 2. 在工程下新建一个 lib 文件夹
 3. 在 https://plugins.jetbrains.com/plugin/8502-background-image-plus/versions 下载最新的 jar 包，放入 lib 文件夹中
