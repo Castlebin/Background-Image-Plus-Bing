@@ -30,9 +30,9 @@ public class BingImage {
     }
 
     private static String parseBingBackgroundImgUrl(String bingHomeHtml) {
-        String tag = "background-image: url(&quot;";
+        String tag = "meta property=\"og:image\" content=\"";
         int start = bingHomeHtml.indexOf(tag);
-        int end = bingHomeHtml.indexOf(")", start);
+        int end = bingHomeHtml.indexOf("&amp;rf=", start);
         return bingHomeHtml.substring(start + tag.length(), end);
     }
 
